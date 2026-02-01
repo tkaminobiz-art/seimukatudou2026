@@ -37,10 +37,10 @@ const OpeningSplash = ({ onComplete }) => {
                     className={`mb-8 transition-all duration-700 ${stage >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                         }`}
                 >
-                    <p className="text-brand-accent font-medium text-sm md:text-base tracking-widest mb-2 animate-fade-in">
+                    <p className="text-brand-accent font-medium text-xs md:text-base tracking-widest mb-2 animate-fade-in">
                         PRODUCED BY
                     </p>
-                    <p className="text-white text-lg md:text-2xl font-bold tracking-wide">
+                    <p className="text-white text-base md:text-2xl font-bold tracking-wide leading-relaxed">
                         元奈良市市議会議員　山岡稔季
                     </p>
                 </div>
@@ -56,10 +56,10 @@ const OpeningSplash = ({ onComplete }) => {
                     className={`mb-6 transition-all duration-700 delay-100 ${stage >= 1 ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
                         }`}
                 >
-                    <h1 className="text-3xl md:text-5xl font-black text-white mb-2 tracking-tight">
+                    <h1 className="text-2xl md:text-5xl font-black text-white mb-2 tracking-tight">
                         Reboot Camp
                     </h1>
-                    <h2 className="text-2xl md:text-4xl font-bold text-brand-accent tracking-wide">
+                    <h2 className="text-xl md:text-4xl font-bold text-brand-accent tracking-wide">
                         政務活動。DX
                     </h2>
                 </div>
@@ -70,7 +70,7 @@ const OpeningSplash = ({ onComplete }) => {
                         }`}
                 >
                     <div className="inline-block px-6 py-2 border border-brand-accent/30 rounded-full backdrop-blur-sm bg-white/5">
-                        <p className="text-white font-medium text-base md:text-lg tracking-wider">
+                        <p className="text-white font-medium text-sm md:text-lg tracking-wider">
                             株式会社 Bloom Road
                         </p>
                     </div>

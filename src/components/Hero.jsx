@@ -31,7 +31,7 @@ const Hero = () => {
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-16 overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-brand-dark tracking-tight">
+                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-brand-dark tracking-tight">
                         政務活動費を<br />
                         返す前に、<br />
                         住民へ<span className="text-brand-accent relative inline-block">
@@ -84,10 +84,10 @@ const Hero = () => {
                     <div className="flex flex-col items-center gap-4">
                         <a
                             href="#contact"
-                            className="bg-brand-accent btn-gradient-animate text-white text-lg md:text-xl font-bold py-5 px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
+                            className="bg-brand-accent btn-gradient-animate text-white text-base md:text-xl font-bold py-4 md:py-5 px-8 md:px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
                         >
                             無料｜使い道設計を依頼する
-                            <span className="block text-xs font-normal mt-1 opacity-90">（30分）自治体名と困りごとだけでOK</span>
+                            <span className="block text-[10px] md:text-xs font-normal mt-1 opacity-90">（30分）自治体名と困りごとだけでOK</span>
                         </a>
 
                         <p className="text-xs text-gray-500 max-w-md">

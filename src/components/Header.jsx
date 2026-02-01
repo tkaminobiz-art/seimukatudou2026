@@ -18,8 +18,9 @@ const Header = () => {
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <div className="font-bold text-xl tracking-wider text-brand-dark">
-                    Reboot Camp 政務活動。DX <span className="text-xs font-normal opacity-70 block md:inline md:ml-2">| 説明責任設計室</span>
+                <div className="font-bold text-lg md:text-xl tracking-wider text-brand-dark leading-tight">
+                    <div>Reboot Camp 政務活動。DX</div>
+                    <span className="text-[10px] md:text-xs font-normal opacity-70 block md:inline md:ml-2">説明責任設計室</span>
                 </div>
 
                 <nav className="hidden lg:flex items-center gap-6">
@@ -32,9 +33,9 @@ const Header = () => {
 
                 <a
                     href="#contact"
-                    className="bg-brand-accent text-white px-5 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity shadow-lg hover:shadow-brand-accent/30 whitespace-nowrap"
+                    className="bg-brand-accent text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-bold text-xs md:text-sm hover:opacity-90 transition-opacity shadow-lg hover:shadow-brand-accent/30 whitespace-nowrap"
                 >
-                    無料｜使い道設計
+                    無料相談
                 </a>
             </div>
         </header>

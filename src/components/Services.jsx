@@ -88,9 +88,10 @@ const Services = () => {
         <section id="services" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div ref={titleRef} className="text-center mb-16 scroll-animate">
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                    <h2 className="text-2xl md:text-4xl font-bold text-brand-dark mb-4 leading-snug">
                         余った政務活動費を<br className="md:hidden" />
-                        <span className="bg-brand-base px-2">「成果物」</span>に変える4つの依頼メニュー
+                        <span className="bg-brand-base px-2">「成果物」</span>に変える<br className="md:hidden" />
+                        4つの依頼メニュー
                     </h2>
                     <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         政務活動費は「使う／使わない」ではなく、<br className="hidden md:block" />
@@ -114,7 +115,7 @@ const Services = () => {
                                         {menu.icon}
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-2xl font-bold text-brand-dark mb-2">{menu.title}</h3>
+                                        <h3 className="text-lg md:text-2xl font-bold text-brand-dark mb-2 leading-snug">{menu.title}</h3>
                                         {menu.price && (
                                             <div className="bg-brand-accent text-white inline-block px-4 py-1 rounded-full text-sm font-bold">
                                                 {menu.price}
@@ -127,7 +128,7 @@ const Services = () => {
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {/* 依頼すること */}
                                     <div>
-                                        <h4 className="font-bold text-brand-accent mb-3 text-sm uppercase tracking-wider border-b border-brand-accent/30 pb-2">依頼すること</h4>
+                                        <h4 className="font-bold text-brand-accent mb-3 text-xs md:text-sm uppercase tracking-wider border-b border-brand-accent/30 pb-2">依頼すること</h4>
                                         <ul className="space-y-2">
                                             {menu.requests.map((req, i) => (
                                                 <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
@@ -140,7 +141,7 @@ const Services = () => {
 
                                     {/* 納品される成果物 */}
                                     <div>
-                                        <h4 className="font-bold text-brand-dark mb-3 text-sm uppercase tracking-wider border-b border-gray-300 pb-2">納品される成果物</h4>
+                                        <h4 className="font-bold text-brand-dark mb-3 text-xs md:text-sm uppercase tracking-wider border-b border-gray-300 pb-2">納品される成果物</h4>
                                         <ul className="space-y-2">
                                             {menu.deliverables.map((del, i) => (
                                                 <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
@@ -153,7 +154,7 @@ const Services = () => {
 
                                     {/* 住民に返る価値 */}
                                     <div className={`${menu.bg} p-4 rounded-xl`}>
-                                        <h4 className="font-bold text-gray-600 mb-3 text-sm uppercase tracking-wider">住民に返る価値</h4>
+                                        <h4 className="font-bold text-gray-600 mb-3 text-xs md:text-sm uppercase tracking-wider">住民に返る価値</h4>
                                         <p className="text-brand-dark font-bold text-sm leading-relaxed">
                                             {menu.value}
                                         </p>
