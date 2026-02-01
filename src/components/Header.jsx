@@ -32,7 +32,9 @@ const Header = () => {
                 </nav>
 
                 <a
-                    href="#contact"
+                    href="https://lin.ee/a6beTNB"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-brand-accent text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-bold text-xs md:text-sm hover:opacity-90 transition-opacity shadow-lg hover:shadow-brand-accent/30 whitespace-nowrap"
                 >
                     無料相談

@@ -23,7 +23,9 @@ const Closing = () => {
                 </p>
 
                 <a
-                    href="#contact"
+                    href="https://lin.ee/a6beTNB"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-brand-accent text-white text-xl md:text-2xl font-bold py-6 px-12 rounded-full shadow-2xl hover:scale-105 transition-transform hover:shadow-brand-accent/50 mb-12 ring-4 ring-brand-accent/20"
                 >
                     無料｜余剰を価値に変える相談

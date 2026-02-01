@@ -81,7 +81,9 @@ const Hero = () => {
 
                     <div className="flex flex-col items-center gap-4">
                         <a
-                            href="#contact"
+                            href="https://lin.ee/a6beTNB"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-brand-accent btn-gradient-animate text-white text-base md:text-xl font-bold py-4 md:py-5 px-8 md:px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
                         >
                             無料｜余剰を価値に変える相談
