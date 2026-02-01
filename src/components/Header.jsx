@@ -19,7 +19,7 @@ const Header = () => {
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <div className="font-bold text-xl tracking-wider text-brand-dark">
-                    政務活動DX <span className="text-xs font-normal opacity-70 block md:inline md:ml-2">| 説明責任設計室</span>
+                    Reboot Camp 政務活動。DX <span className="text-xs font-normal opacity-70 block md:inline md:ml-2">| 説明責任設計室</span>
                 </div>
 
                 <nav className="hidden lg:flex items-center gap-6">

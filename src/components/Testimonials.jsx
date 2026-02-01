@@ -1,6 +1,9 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const Testimonials = () => {
+    const titleRef = useScrollAnimation();
+
     const testimonials = [
         {
             location: '北海道 札幌市議会',
@@ -28,7 +31,7 @@ const Testimonials = () => {
     return (
         <section className="py-20 bg-brand-base/50">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div ref={titleRef} className="text-center mb-16 scroll-animate">
                     <span className="text-brand-accent font-bold tracking-widest text-sm uppercase mb-2 block">Voice</span>
                     <h2 className="text-3xl font-bold text-brand-dark mb-4">
                         導入いただいた議員の声
@@ -37,7 +40,7 @@ const Testimonials = () => {
 
                 <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {testimonials.map((item, index) => (
-                        <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover-lift">
                             <div className="mb-4">
                                 <div className="text-xs font-bold text-brand-accent mb-1">{item.service}</div>
                                 <div className="font-bold text-brand-dark">{item.location}</div>

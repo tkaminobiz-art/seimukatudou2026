@@ -1,6 +1,9 @@
 import React from 'react';
+import { useParallax } from '../utils/PremiumAnimations';
 
 const Hero = () => {
+    const parallaxOffset = useParallax(0.3);
+
     const miniCards = [
         {
             num: '1',
@@ -81,7 +84,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center gap-4">
                         <a
                             href="#contact"
-                            className="bg-brand-accent text-white text-lg md:text-xl font-bold py-5 px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
+                            className="bg-brand-accent btn-gradient-animate text-white text-lg md:text-xl font-bold py-5 px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
                         >
                             無料｜使い道設計を依頼する
                             <span className="block text-xs font-normal mt-1 opacity-90">（30分）自治体名と困りごとだけでOK</span>
@@ -99,10 +102,16 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand-accent/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 rounded-full blur-3xl"></div>
+            {/* Background Decor with Parallax */}
+            <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none overflow-hidden">
+                <div
+                    className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand-accent/5 rounded-full blur-3xl"
+                    style={{ transform: `translateY(${parallaxOffset}px)` }}
+                ></div>
+                <div
+                    className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 rounded-full blur-3xl"
+                    style={{ transform: `translateY(${-parallaxOffset * 0.8}px)` }}
+                ></div>
             </div>
         </section>
     );

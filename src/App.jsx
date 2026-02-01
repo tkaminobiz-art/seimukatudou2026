@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import OpeningSplash from './components/OpeningSplash';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Concept from './components/Concept';
@@ -16,27 +18,33 @@ import Testimonials from './components/Testimonials';
 import TrustSignals from './components/TrustSignals';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
-    <div className="min-h-screen bg-brand-base text-brand-dark font-sans selection:bg-brand-accent selection:text-white">
-      <Header />
-      <main>
-        <Hero />
-        <Concept />
-        <Diagnosis />
-        <PainPoints />
-        <Deliverables />
-        <Services />
-        <Testimonials />
-        <Comparison />
-        <TrustSignals />
-        <Flow />
-        <Pricing />
-        <Promise />
-        <FAQ />
-        <Closing />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {showSplash && <OpeningSplash onComplete={() => setShowSplash(false)} />}
+
+      <div className="min-h-screen bg-brand-base text-brand-dark font-sans selection:bg-brand-accent selection:text-white">
+        <Header />
+        <main>
+          <Hero />
+          <Concept />
+          <Diagnosis />
+          <PainPoints />
+          <Deliverables />
+          <Services />
+          <Testimonials />
+          <Comparison />
+          <TrustSignals />
+          <Flow />
+          <Pricing />
+          <Promise />
+          <FAQ />
+          <Closing />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

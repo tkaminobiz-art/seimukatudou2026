@@ -1,11 +1,15 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const Concept = () => {
+    const titleRef = useScrollAnimation();
+    const gridRef = useScrollAnimation();
+
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
+                    <div ref={titleRef} className="text-center mb-16 scroll-animate">
                         <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-6 leading-tight">
                             費用は、自治体ルールと支援範囲で変わります。<br />
                             だから<span className="text-brand-accent">最初に診断</span>します。
@@ -16,7 +20,7 @@ const Concept = () => {
                         </p>
                     </div>
 
-                    <div className="bg-brand-base rounded-2xl p-8 md:p-12 mb-12 shadow-inner">
+                    <div ref={gridRef} className="bg-brand-base rounded-2xl p-8 md:p-12 mb-12 shadow-inner scroll-animate">
                         <div className="grid md:grid-cols-3 gap-6 text-center font-bold text-brand-dark text-lg md:text-xl">
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-brand-accent/20">
                                 どこまでを<br />支援するか

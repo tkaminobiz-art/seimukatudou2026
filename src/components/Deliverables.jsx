@@ -1,10 +1,14 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const Deliverables = () => {
+    const titleRef = useScrollAnimation();
+    const gridRef = useScrollAnimation();
+
     return (
         <section id="deliverables" className="py-24 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div ref={titleRef} className="text-center mb-16 scroll-animate">
                     <span className="text-brand-accent font-bold tracking-widest text-sm uppercase mb-2 block">Deliverables</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
                         必要なのは、説明できる<br className="md:hidden" />
@@ -13,7 +17,7 @@ const Deliverables = () => {
                 </div>
 
                 {/* Bento Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto scroll-animate">
 
                     {/* Large Card: Training */}
                     <div className="md:col-span-2 bg-gradient-to-br from-brand-base to-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">

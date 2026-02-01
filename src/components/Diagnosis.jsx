@@ -1,12 +1,16 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const Diagnosis = () => {
+    const titleRef = useScrollAnimation();
+    const cardRef = useScrollAnimation();
+
     return (
         <section id="diagnosis" className="py-24 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-brand-base to-white z-0"></div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-16">
+                <div ref={titleRef} className="text-center mb-16 scroll-animate">
                     <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-tight mb-6">
                         30分で<span className="text-brand-accent">「どれを、どこまで」</span><br />
                         整えるかが決まります。
@@ -19,7 +23,7 @@ const Diagnosis = () => {
 
                 <div className="max-w-5xl mx-auto">
                     {/* Glassmorphism Card with Deliverables */}
-                    <div className="relative group">
+                    <div ref={cardRef} className="relative group scroll-animate">
                         <div className="absolute inset-0 bg-brand-accent/20 rounded-3xl blur-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
                         <div className="relative bg-white/60 backdrop-blur-xl border border-white/50 p-8 md:p-12 rounded-3xl shadow-xl">
                             <div className="absolute -top-4 -right-4 bg-brand-warning text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-xs shadow-lg rotate-12 z-20">

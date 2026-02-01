@@ -1,6 +1,9 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const PainPoints = () => {
+    const cardRef = useScrollAnimation();
+
     const points = [
         '「適切な運用」に自信が持てず、判断が止まる',
         '記録・整理・報告の負担が重く、政策に時間が回らない',
@@ -12,7 +15,7 @@ const PainPoints = () => {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div ref={cardRef} className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 scroll-animate hover-lift">
                     <div className="bg-brand-dark py-10 px-6 text-center">
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                             こんな状況の方へ

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useScrollAnimation } from '../utils/AnimationUtils';
 
 const Services = () => {
+    const titleRef = useScrollAnimation();
+
     const menus = [
         {
             id: '1',
@@ -84,7 +87,7 @@ const Services = () => {
     return (
         <section id="services" className="py-24 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div ref={titleRef} className="text-center mb-16 scroll-animate">
                     <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
                         余った政務活動費を<br className="md:hidden" />
                         <span className="bg-brand-base px-2">「成果物」</span>に変える4つの依頼メニュー
@@ -96,60 +99,69 @@ const Services = () => {
                 </div>
 
                 <div className="space-y-8 max-w-6xl mx-auto">
-                    {menus.map((menu) => (
-                        <div key={menu.id} className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
-                            <div className="flex items-start gap-4 mb-6">
-                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${menu.bg} shrink-0`}>
-                                    {menu.icon}
+                    {menus.map((menu, index) => {
+                        // eslint-disable-next-line react-hooks/rules-of-hooks
+                        const cardRef = useScrollAnimation();
+                        return (
+                            <div
+                                key={menu.id}
+                                ref={cardRef}
+                                className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover-lift scroll-animate"
+                                style={{ animationDelay: `${index * 100}ms` }}
+                            >
+                                <div className="flex items-start gap-4 mb-6">
+                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${menu.bg} shrink-0`}>
+                                        {menu.icon}
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-2xl font-bold text-brand-dark mb-2">{menu.title}</h3>
+                                        {menu.price && (
+                                            <div className="bg-brand-accent text-white inline-block px-4 py-1 rounded-full text-sm font-bold">
+                                                {menu.price}
+                                                {menu.priceNote && <span className="text-xs ml-1 opacity-90">{menu.priceNote}</span>}
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-bold text-brand-dark mb-2">{menu.title}</h3>
-                                    {menu.price && (
-                                        <div className="bg-brand-accent text-white inline-block px-4 py-1 rounded-full text-sm font-bold">
-                                            {menu.price}
-                                            {menu.priceNote && <span className="text-xs ml-1 opacity-90">{menu.priceNote}</span>}
-                                        </div>
-                                    )}
+
+                                <div className="grid md:grid-cols-3 gap-6">
+                                    {/* 依頼すること */}
+                                    <div>
+                                        <h4 className="font-bold text-brand-accent mb-3 text-sm uppercase tracking-wider border-b border-brand-accent/30 pb-2">依頼すること</h4>
+                                        <ul className="space-y-2">
+                                            {menu.requests.map((req, i) => (
+                                                <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                                                    <span className="text-brand-accent mt-0.5 shrink-0">•</span>
+                                                    <span>{req}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* 納品される成果物 */}
+                                    <div>
+                                        <h4 className="font-bold text-brand-dark mb-3 text-sm uppercase tracking-wider border-b border-gray-300 pb-2">納品される成果物</h4>
+                                        <ul className="space-y-2">
+                                            {menu.deliverables.map((del, i) => (
+                                                <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                                                    <span className="text-gray-400 mt-0.5 shrink-0">✓</span>
+                                                    <span>{del}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* 住民に返る価値 */}
+                                    <div className={`${menu.bg} p-4 rounded-xl`}>
+                                        <h4 className="font-bold text-gray-600 mb-3 text-sm uppercase tracking-wider">住民に返る価値</h4>
+                                        <p className="text-brand-dark font-bold text-sm leading-relaxed">
+                                            {menu.value}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div className="grid md:grid-cols-3 gap-6">
-                                {/* 依頼すること */}
-                                <div>
-                                    <h4 className="font-bold text-brand-accent mb-3 text-sm uppercase tracking-wider border-b border-brand-accent/30 pb-2">依頼すること</h4>
-                                    <ul className="space-y-2">
-                                        {menu.requests.map((req, i) => (
-                                            <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
-                                                <span className="text-brand-accent mt-0.5 shrink-0">•</span>
-                                                <span>{req}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                {/* 納品される成果物 */}
-                                <div>
-                                    <h4 className="font-bold text-brand-dark mb-3 text-sm uppercase tracking-wider border-b border-gray-300 pb-2">納品される成果物</h4>
-                                    <ul className="space-y-2">
-                                        {menu.deliverables.map((del, i) => (
-                                            <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
-                                                <span className="text-gray-400 mt-0.5 shrink-0">✓</span>
-                                                <span>{del}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                {/* 住民に返る価値 */}
-                                <div className={`${menu.bg} p-4 rounded-xl`}>
-                                    <h4 className="font-bold text-gray-600 mb-3 text-sm uppercase tracking-wider">住民に返る価値</h4>
-                                    <p className="text-brand-dark font-bold text-sm leading-relaxed">
-                                        {menu.value}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* Section CTA */}
@@ -160,7 +172,7 @@ const Services = () => {
                     <p className="text-gray-600 mb-8">
                         自治体運用に照らし、必要な成果物と支援範囲を整理します。
                     </p>
-                    <button className="bg-brand-accent text-white text-xl font-bold py-5 px-12 rounded-full shadow-xl hover:scale-105 transition-transform">
+                    <button className="bg-brand-accent btn-gradient-animate text-white text-xl font-bold py-5 px-12 rounded-full shadow-xl hover:scale-105 transition-transform">
                         無料｜使い道設計を依頼する（30分）
                     </button>
                     <p className="text-xs text-gray-500 mt-4">
