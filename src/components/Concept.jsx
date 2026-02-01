@@ -37,6 +37,33 @@ const Concept = () => {
                         </p>
                     </div>
 
+                    {/* 新規追加: 感情的障壁の解消セクション */}
+                    <div className="bg-gradient-to-br from-white to-brand-base/30 p-6 md:p-8 rounded-xl border-l-4 border-brand-accent shadow-md mb-12">
+                        <h3 className="font-bold text-brand-dark mb-4 text-lg md:text-xl">
+                            💡 予算が余る＝悪いこと？いいえ、選択の機会です
+                        </h3>
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
+                            多くの議員が「余らせてしまった」と感じています。<br />
+                            でもそれは、<strong className="text-brand-dark">本業に集中した結果</strong>。誇るべきことです。
+                        </p>
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
+                            唯一の問題は「どう説明するか」だけです：
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-4 mb-4">
+                            <div className="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                                <div className="font-bold text-red-600 mb-2 text-sm">❌ 返却の場合</div>
+                                <div className="text-gray-600 text-sm">「活動不足？」という誤解を生むリスク</div>
+                            </div>
+                            <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <div className="font-bold text-green-600 mb-2 text-sm">✅ 成果物化の場合</div>
+                                <div className="text-gray-600 text-sm">「賢く使った」という実績として説明可能</div>
+                            </div>
+                        </div>
+                        <p className="text-xs md:text-sm text-gray-500 italic">
+                            この違いを、30分の無料診断で整理します。
+                        </p>
+                    </div>
+
                     <div className="max-w-2xl mx-auto">
                         <h3 className="text-center font-bold text-gray-400 text-sm tracking-widest mb-6">ここがポイント</h3>
                         <ul className="space-y-4">

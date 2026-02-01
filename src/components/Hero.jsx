@@ -32,21 +32,19 @@ const Hero = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-brand-dark tracking-tight">
-                        政務活動費を<br />
-                        返す前に、<br />
-                        住民へ<span className="text-brand-accent relative inline-block">
-                            "成果"
+                        政務活動費、<br className="md:hidden" />返す前に。<br />
+                        住民への<span className="text-brand-accent relative inline-block">
+                            「見える成果」
                             <svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-accent opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                             </svg>
-                        </span>として<br />
-                        返しませんか。
+                        </span>に<br className="md:hidden" />変えませんか。
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-600 mb-2 leading-relaxed max-w-3xl mx-auto font-medium">
-                        政務活動費は、住民の利益のための制度です。<br />
-                        返納が誠実になるのは、<br className="md:hidden" />
-                        <span className="font-bold text-brand-dark">説明できる成果物が整っているときだけ。</span>
+                        予算を余らせたのは、本業に集中した証です。<br />
+                        問題は<span className="font-bold text-brand-dark">「返却＝未活用」と見られるリスク</span>。<br className="md:hidden" />
+                        成果物に変えれば、<span className="font-bold text-brand-accent">「戦略的な説明責任」</span>として胸を張れます。
                     </p>
 
                     <p className="text-base text-gray-500 mb-4 leading-relaxed max-w-2xl mx-auto">
@@ -86,7 +84,7 @@ const Hero = () => {
                             href="#contact"
                             className="bg-brand-accent btn-gradient-animate text-white text-base md:text-xl font-bold py-4 md:py-5 px-8 md:px-10 rounded-full shadow-xl hover:scale-105 transition-transform hover:shadow-brand-accent/40 w-full max-w-md"
                         >
-                            無料｜使い道設計を依頼する
+                            無料｜余剰を価値に変える相談
                             <span className="block text-[10px] md:text-xs font-normal mt-1 opacity-90">（30分）自治体名と困りごとだけでOK</span>
                         </a>
 

@@ -89,9 +89,9 @@ const Services = () => {
             <div className="container mx-auto px-4">
                 <div ref={titleRef} className="text-center mb-16 scroll-animate">
                     <h2 className="text-2xl md:text-4xl font-bold text-brand-dark mb-4 leading-snug">
-                        余った政務活動費を<br className="md:hidden" />
-                        <span className="bg-brand-base px-2">「成果物」</span>に変える<br className="md:hidden" />
-                        4つの依頼メニュー
+                        余剰予算を<br className="md:hidden" />
+                        <span className="bg-brand-base px-2">「住民価値」</span>に変える、<br className="md:hidden" />
+                        4つの選択肢
                     </h2>
                     <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         政務活動費は「使う／使わない」ではなく、<br className="hidden md:block" />
