@@ -20,7 +20,7 @@ const Comparison = () => {
 
                 <div className="max-w-4xl mx-auto overflow-x-auto pb-4">
                     <div className="min-w-[600px]">
-                        <div className="grid grid-cols-4 gap-4 mb-4 text-center font-bold text-sm md:text-base sticky top-0 bg-white z-10 py-2">
+                        <div className="grid grid-cols-4 gap-4 mb-4 text-center font-bold text-sm md:text-base sticky top-0 bg-white z-10 py-2 pt-6">
                             <div className="text-left pl-4 text-gray-500 flex items-end pb-2">比較項目</div>
                             <div className="bg-gray-100 rounded-t-lg py-3 text-gray-600">一般制作</div>
                             <div className="bg-gray-100 rounded-t-lg py-3 text-gray-600">ITツール</div>
