@@ -3,12 +3,16 @@ import BudgetSimulator from './BudgetSimulator';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen py-20 md:py-32 bg-gradient-to-b from-brand-base to-white overflow-hidden">
-            {/* 背景装飾 */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-brand-accent rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-accent rounded-full blur-3xl"></div>
+        <section className="relative min-h-screen py-20 md:py-32 bg-gradient-to-b from-brand-base via-white to-brand-base/30 overflow-hidden">
+            {/* メッシュグラデーション背景 */}
+            <div className="absolute inset-0 opacity-[0.07]">
+                <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-blue-400 via-purple-300 to-transparent rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-400 via-pink-300 to-transparent rounded-full blur-3xl"></div>
+                <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full blur-2xl"></div>
             </div>
+
+            {/* グリッドパターン */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* 2カラムレイアウト */}
