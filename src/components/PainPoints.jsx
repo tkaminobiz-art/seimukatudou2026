@@ -28,8 +28,8 @@ const PainPoints = () => {
                     <div className="p-8 md:p-12">
                         <ul className="space-y-6">
                             {points.map((point, index) => (
-                                <li key={index} className="flex items-start gap-4 p-4 hover:bg-brand-base/30 rounded-lg transition-colors duration-300">
-                                    <div className="shrink-0 w-8 h-8 rounded-full bg-brand-warning text-white flex items-center justify-center font-bold text-lg mt-0.5 shadow-sm">
+                                <li key={index} className="flex items-start gap-4 p-4 hover:bg-gradient-to-r hover:from-[#2A9D8F]/5 hover:via-[#6C63FF]/5 hover:to-transparent rounded-lg transition-all duration-300 group">
+                                    <div className="shrink-0 w-8 h-8 rounded-full bg-brand-warning text-white flex items-center justify-center font-bold text-lg mt-0.5 shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
                                         !
                                     </div>
                                     <span className="text-lg md:text-xl font-bold text-gray-700 leading-snug">

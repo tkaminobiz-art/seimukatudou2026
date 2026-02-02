@@ -4,15 +4,20 @@ import BudgetSimulator from './BudgetSimulator';
 const Hero = () => {
     return (
         <section className="relative min-h-screen py-20 md:py-32 bg-gradient-to-b from-brand-base via-white to-brand-base/30 overflow-hidden">
-            {/* メッシュグラデーション背景 */}
-            <div className="absolute inset-0 opacity-[0.07]">
-                <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-blue-400 via-purple-300 to-transparent rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-400 via-pink-300 to-transparent rounded-full blur-3xl"></div>
-                <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full blur-2xl"></div>
+            {/* Premium Marble Accent - 40% coverage from top-right */}
+            <div className="absolute inset-0 opacity-[0.12]">
+                {/* Teal Flow from top-right */}
+                <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-gradient-to-bl from-[#2A9D8F]/60 via-[#2A9D8F]/30 to-transparent rounded-full blur-[100px] animate-marble-float"></div>
+
+                {/* Purple accent */}
+                <div className="absolute top-[5%] right-[20%] w-[30%] h-[30%] bg-gradient-to-bl from-[#6C63FF]/50 via-[#6C63FF]/20 to-transparent rounded-full blur-[80px] animate-marble-pulse"></div>
+
+                {/* Gold highlight */}
+                <div className="absolute top-[15%] right-[10%] w-[25%] h-[25%] bg-gradient-to-l from-[#F4A261]/40 via-[#F4A261]/15 to-transparent rounded-full blur-[70px] animate-marble-glow"></div>
             </div>
 
-            {/* グリッドパターン */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+            {/* グリッドパターン（より控えめ） */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(42,157,143,.015)_1px,transparent_1px),linear-gradient(90deg,rgba(42,157,143,.015)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* 2カラムレイアウト */}
@@ -32,20 +37,29 @@ const Hero = () => {
 
                         {/* 3つのアップデート概要 */}
                         <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-2xl mx-auto lg:mx-0 mb-8">
-                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center">
-                                <div className="text-3xl mb-2">📋</div>
-                                <div className="font-bold text-brand-dark text-sm md:text-base mb-1">集中</div>
-                                <div className="text-xs text-gray-600">事務代行</div>
+                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#2A9D8F]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative z-10">
+                                    <div className="text-3xl mb-2">📋</div>
+                                    <div className="font-bold text-brand-dark text-sm md:text-base mb-1">集中</div>
+                                    <div className="text-xs text-gray-600">事務代行</div>
+                                </div>
                             </div>
-                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center">
-                                <div className="text-3xl mb-2">📚</div>
-                                <div className="font-bold text-brand-dark text-sm md:text-base mb-1">進化</div>
-                                <div className="text-xs text-gray-600">研修支援</div>
+                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative z-10">
+                                    <div className="text-3xl mb-2">📚</div>
+                                    <div className="font-bold text-brand-dark text-sm md:text-base mb-1">進化</div>
+                                    <div className="text-xs text-gray-600">研修支援</div>
+                                </div>
                             </div>
-                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center">
-                                <div className="text-3xl mb-2">💬</div>
-                                <div className="font-bold text-brand-dark text-sm md:text-base mb-1">対話</div>
-                                <div className="text-xs text-gray-600">デジタル発信</div>
+                            <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center group relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#F4A261]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative z-10">
+                                    <div className="text-3xl mb-2">💬</div>
+                                    <div className="font-bold text-brand-dark text-sm md:text-base mb-1">対話</div>
+                                    <div className="text-xs text-gray-600">デジタル発信</div>
+                                </div>
                             </div>
                         </div>
 
@@ -55,7 +69,7 @@ const Hero = () => {
                                 href="https://lin.ee/a6beTNB"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block bg-brand-accent text-white text-base font-bold py-4 px-8 rounded-full hover:opacity-90 transition-opacity shadow-xl"
+                                className="inline-block bg-brand-accent text-white text-base font-bold py-4 px-8 rounded-full hover:opacity-90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl relative overflow-hidden group"
                             >
                                 無料｜余剰を価値に変える相談
                             </a>
