@@ -215,6 +215,16 @@ const BudgetSimulator = () => {
                         </div>
                     </div>
 
+                    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mt-4 rounded">
+                        <p className="text-xs text-blue-800 flex items-start gap-2">
+                            <span className="text-base">💡</span>
+                            <span>
+                                残り期間に合わせた集中プランや、年度末のスポット対応も可能です。
+                                契約開始時期は柔軟に調整できますので、無料相談でご相談ください。
+                            </span>
+                        </p>
+                    </div>
+
                     <p className="text-xs text-gray-500 italic mt-4">
                         ※ 詳細は無料診断で最適化します
                     </p>
