@@ -79,11 +79,23 @@
     }
 
     .animate-fade-in {
-        animation: fadeIn 0.8s ease-out forwards;
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animation-delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .animation-delay-600 {
+        animation-delay: 600ms;
     }
 
     .animate-scale-in {
         animation: scaleIn 0.5s ease-out forwards;
+    }
+
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out forwards;
     }
 
     .animate-delay-100 {
